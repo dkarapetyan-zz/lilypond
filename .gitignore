@@ -1,0 +1,7 @@
+soundfonts/
+**/**/*.midi
+**/**/*.pdf
+midi/
+**/**/.swp
+*.project
+
