@@ -1,4 +1,7 @@
 \version "2.18.2"
+
+#(ly:set-option 'point-and-click #f)
+
 boyMusic = {
   \key f \minor
   \clef treble
@@ -403,7 +406,7 @@ des1}}\score {
         %<< \global \altMusic >>
         %%<< \global \boyMusic >>
       %>>
-      %\new Staff <<
+      %\new Staff <<k
         %\clef bass
         %\set Staff.printPartCombineTexts = ##f
         %\partcombine
