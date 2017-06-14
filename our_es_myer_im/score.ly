@@ -1,16 +1,11 @@
 \header {
   title = "Our Es Mayr Eem"
   composer = "David Karapetyan"
-  tagline = \markup {
-    Engraved at
-    \simple #(strftime "%Y-%m-%d" (localtime (current-time)))
-    with \with-url #"http://lilypond.org/"
-    \line { LilyPond \simple #(lilypond-version) (http://lilypond.org/) }
-  }
+  tagline = ##f
 }
 
 
-keytimeone = { \key bes \minor \time 2/4}
+keytimeone = { \key bes \minor \time 4/4}
 keytimetwo = { \time 4/4}
 keytimethree = { \time 3/4}
 keytimefour = { \time 4/4}
@@ -19,8 +14,7 @@ keytimefive = {\time 3/4}
 sopranoMusic = \relative c'' {
   \clef "treble"
   \keytimeone
-  bes'2^\mp | aes2 ~ | aes2 | f2 |
-  \keytimetwo
+  \partial 2 bes'2^\mp | aes1  | f1 |
   % I
 \mark "I"
   ees2 f2 ~ | f4 ees4 f4( ges4) |
@@ -130,8 +124,8 @@ altoMusic= \relative a' {
   \clef "treble"
   \keytimeone
   \voiceOne
-  r2 | r2 |
-  r2 | r2 |
+  \partial 2 r2 | r1 |
+  r1 | 
   bes2 des2( ~ | des4 r4 bes2) |
   bes2 aes2 ~ | aes2 r2 |
   aes1 ~ | aes4 r4 <f a>4(  r4 |
@@ -144,7 +138,7 @@ altoMusic= \relative a' {
   ges1 ( | f1 |
   ees1 | ges2.\fermata r4\fermata)
   \mark "II"
-  <ees ges>2 <d f>2 ~ | <d f>2 <c f>2  | <ges' bes>2 <f aes>2 ~ | <f aes>2
+  <ees ges>2 <d f>2( ~ | <d f>2 <c f>2)  | <ges' bes>2 <f aes>2 ~ | <f aes>2
   \tuplet 3/2 {d4~ d4 d4} |
   ges2 f2 ~ | f2 \tuplet 3/2 {<d f>4~ <d f>4 <d f>4} | <des f>2 (
   ges4 ) | bes2. ( | ces2.) |
@@ -185,9 +179,8 @@ tsur __ a -- noush __
 tenorMusic = \relative c' {
   \clef "bass"
   \keytimeone
-  r2^\markup{("ah")} | r2 |
-  r2 | r2 |
-  \keytimetwo
+  \partial 2 r2^\markup{("ah")} | r1 |
+  r1 |
   r1 | r1 |
   ees1 ~ | ees1 |
   b1 ~ | b4 r4 b2 |
@@ -247,9 +240,8 @@ a -- noush __
 bassMusic = \relative c' {
   \clef "bass"
   \keytimeone
-  r2^\markup{("mm")} | r2 |
-  r2 | r2 |
-  \keytimetwo
+  \partial 2 r2^\markup{("mm")} | r1 |
+  r1 | 
   r1 | r1 |
   aes1 ~ | aes4 r4 f2 |
   aes1 ~ | aes2 r2 |
