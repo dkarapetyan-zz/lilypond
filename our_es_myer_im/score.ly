@@ -13,6 +13,7 @@ keytimefour = { \time 4/4}
 keytimefive = {\time 3/4}
 
 sopranoMusic = \relative c'' {
+	\tempo "Adagio" 4 = 80
   \clef "treble"
   \keytimeone
   \partial 2 bes'2^\mp | aes1  | f1 |
