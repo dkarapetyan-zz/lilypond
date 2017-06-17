@@ -1,6 +1,7 @@
 \version "2.18"
 \header {
   title = "Our Es Mayr Eem"
+	copyright= \markup { "Copyright" \char ##x00A9 "2017 by David Karapetyan" } 
   composer = "David Karapetyan"
   tagline = ##f
 }
