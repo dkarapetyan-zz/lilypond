@@ -2,7 +2,7 @@
 \header {
   title = "Pereg"
 	copyright= \markup {
-    "Copyright" \char ##x00A9 "2017 by David Karapetyan" } 
+    "Copyright" \char ##x00A9 "2017 by David Karapetyan" }
   composer = "David Karapetyan"
   tagline = ##f
 }
@@ -16,14 +16,14 @@ upper = \relative c' {
   \keytimeone
   \tempo 4 =160
   \mark "I"
-  \repeat volta 2 {f8^\mf a c ees des c des c |
+  \repeat volta 2 {f8^\mf_\markup{"with reverb"}  a c ees des c des c |
   g bes c f c bes e c} |
   f,8 aes c ees des c des c |
   g bes c f c bes e c |
   f,8 a c ees des c des c |
   g bes c f c bes e c |
   \mark "II"
-  \repeat volta 4 {f,^\markup{"repeat 4 times"} aes c ees d c des c |
+  \repeat volta 4 {f,^\markup{"repeat 4 times"} aes c ees des c des c |
   g-^ bes c e-^ c bes e-^ c} |
   \mark "III"
   \repeat volta 2 {f, aes f aes f aes f aes |
@@ -61,7 +61,7 @@ upper = \relative c' {
   }
   \\
   { < ees, ges >1 | <ges bes>1}
->> 
+>>
 <a f'>8 c des ees des c a4
 r1 |
 <<
@@ -69,7 +69,7 @@ r1 |
   des ges des ges des ges f ees^\fermata | }
   \\
   {
-    <ees, ges>1 | <ges bes>1
+    <ees,  ges>1 | <ges bes>1
   }
 >>
 <a f'>8 c des es des c a4~ |
@@ -79,12 +79,12 @@ a1~ |
 \override TextSpanner.bound-details.left.text = "rit."
 
 a4^\f \startTextSpan bes'8 a aes ees^\fermata |
-f2.~ | 
+f2.~ |
 f2.~ \stopTextSpan |
-f2. | 
+f2. |
 <c, ees ees'>2.~^\p
 <c ees ees'>2.
-a'2.~ | a2.~ | a2.~ | a2. | 
+a'2.~ | a2.~ | a2.~ | a2. |
 \keytimethree
 \mark "I'"
 bes8^\mf^\markup{"a tempo"} des f aes ges f ges f |
@@ -95,16 +95,17 @@ bes,8 d f aes ges f ges f |
 c ees f ges f ees a f |
 bes,8-^ des f aes ges f ges f |
 \time 3/4
+\tempo 4 = 70
 \tuplet 3/2 4 {c8\startTextSpan ees f
 ges\> f ees a-^ f~f\fermata\!\stopTextSpan}
 \time 12/8
 \tempo "Swinging" 4 = 150
 \repeat volta 2 {
 <<
-  {bes8~ bes8 des8 bes8 des8~des8
+  {bes8~ bes8 des8-^ bes8 des8~des8
   bes8~bes8 a aes ges r8\fermata}
   \\
-  {d,4}
+  {des,4}
 >>
 <des e'>2.^\mp q
 }
@@ -113,31 +114,31 @@ ges\> f ees a-^ f~f\fermata\!\stopTextSpan}
   \\
   {ges,4 r4 ges ees2}
 >>
-<ees ees'>2.-^ ees'2.^\p |
+<ees f '>2.-^ ees'2.^\p |
 <<
   {ges8~ges bes ges bes~bes ges4 f e |}
   \\
   {ges,4 r4 ges ees2}
 >>
-<ees ees'>2. ees'2. |
+<ees f'>2. ees'2. |
 
 <des, des'>4. des4.~des~des |
 a'4. r4. r4. r4. |
 <ges des'>4.^\mf ges4.^\p  ~ges~ges |
-a2.~a2. 
+a2.~a2.
 
 
 
 
 
 
-  
 
 
 
 
 
- 
+
+
 
 
 
@@ -149,41 +150,41 @@ lower = \relative c {
   \clef bass
   \keytimeone
   r1 |
-  r1 | 
+  r1 |
   r1 | r1 | r1 | r1 |
   f,2. r4 |  g' r8  c,4 r8 c'4 |
-  f,,4 f'2 r4  | g,4 g'2 r4 | 
+  f,,4 f'2 r4  | g,4 g'2 r4 |
   aes,4 aes'2 r4 | aes,,8^\f bes c bes aes2 |
   f'4 f'2 r4 | g,4 g'2 r4 |
   aes, aes'2 r4 | aes,,4 aes'2 r4 | f4 f'4 r2 | g,4 g'2 r4 |
   aes,4 aes'2 r4 | aes,8 bes c bes aes2 |
   f'4 aes4 r2 |  e4 bes'2 r4 | ees,4~ <ees c'>2 r4  |
-  aes8 bes c bes aes2 | 
+  aes8 bes c bes aes2 |
   aes,8 bes c bes aes2 |
   ges'4 bes2 r4 | ges,4 ges,2. | f''4 a2. |
-  c,,8 des ees des c2 | 
-  ges''4 bes2. | des,4 bes'2. | f4 c'2. |   
+  c,,8 des ees des c2 |
+  ges''4 bes2. | des,4 bes'2. | f4 c'2. |
  c,8 des ees des c2 | ges4 bes'2 r4 |
- e,,4 ges'2. | f,4 a'2. | f,8^\mp a c ees des c a4\fermata | 
- << {ges2 s2 | ees2 s2 | } \\ {bes''4  bes2. | ges4 ges2. |} 
+ ees  ,,4 ges'2. | f,4 a'2. | f,8^\mp a c ees des c a4\fermata |
+ << {ges2 s2 | ees2 s2 | } \\ {bes''4  bes2. | ges4 ges2. |}
  >>
- f4 c2. | 
+ f4 c2. |
  f,8^\mp a c ees des c des bes |
  f8 a c ees des c des bes |
  \time 3/4
  f^\mp a c ees des bes |
- f a' bes a aes f |
+   f a' bes a aes f |
  f2.~ | f2. | ees2.~ | ees2.~ |
  ees2.~ | ees2.~ |
  ees2.~ | ees2. |
 \keytimethree
-<bes, des'>1 | ees'4. ges4. f4  | 
-<bes,, des'>1-^ | 
-ees'4. ges4. f4 | bes,1 | 
+<bes, des'>1 | ees'4. ges4. f4  |
+<bes,, des'>1-^ |
+ees'4. ges4. f4 | bes,1 |
 ees4. f4. a4 | bes,1-^  |
-\time 3/4 
-ees4 <ees, ges'>4 <f f'>4| 
-\time 12/8 
+\time 3/4
+ees4 <ees, ges'>4 <f f'>4|
+\time 12/8
 r2. bes8~bes f des' bes r8 |
 <aes des  ees aes>2. aes'2. |
 <ees ges bes>2. <ees ges bes>2. |
@@ -205,15 +206,15 @@ r2. bes8~bes f des' bes r8 |
 
 
 
-  
- 
- 
-  
 
-  
-  
-  
-  
+
+
+
+
+
+
+
+
 }
 
 \score {
@@ -223,5 +224,5 @@ r2. bes8~bes f des' bes r8 |
     \new Staff = "lower" \lower
   >>
   \layout { }
-  %\midi { }
+  \midi { }
 }
