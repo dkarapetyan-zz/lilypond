@@ -25,6 +25,7 @@ upper = \relative c' {
   \mark "II"
   \repeat volta 4 {f,^\markup{"repeat 4 times"} aes c ees d c des c |
   g-^ bes c e-^ c bes e-^ c} |
+  \mark "III"
   \repeat volta 2 {f, aes f aes f aes f aes |
   e aes e aes e\> aes e aes\! |
   ees\mp aes ees aes ees aes ees aes |
@@ -37,7 +38,7 @@ upper = \relative c' {
   e bes' e, bes' e, bes' e, bes' |
   ees, c' ees, c' ees, c' ees, c' |
   ees, c' ees, c' ees, c' ees, c' |
-  \mark "III"
+  \mark "III'"
   \repeat volta 2 {ees, c' ees, c' ees, c' ees, c' |
   ees, des' ees, des' ees, des' ees, des' |
   ees, ees' ees, ees' ees, ees' ees, ees' |}
@@ -64,8 +65,8 @@ upper = \relative c' {
 <a f'>8 c des ees des c a4
 r1 |
 <<
-  {bes8 ees bes ees bes ees bes ees |
-  des ges des ges des ges f ees | }
+  {bes8^\f ees bes ees bes ees bes ees |
+  des ges des ges des ges f ees^\fermata | }
   \\
   {
     <ees, ges>1 | <ges bes>1
@@ -112,7 +113,7 @@ ges\> f ees a-^ f~f\fermata\!\stopTextSpan}
   \\
   {ges,4 r4 ges ees2}
 >>
-<ees ees'>2. ees'2.^\p |
+<ees ees'>2.-^ ees'2.^\p |
 <<
   {ges8~ges bes ges bes~bes ges4 f e |}
   \\
@@ -160,11 +161,11 @@ lower = \relative c {
   aes8 bes c bes aes2 | 
   aes,8 bes c bes aes2 |
   ges'4 bes2 r4 | ges,4 ges,2. | f''4 a2. |
-  c,,8 bes ees des c2 | 
+  c,,8 des ees des c2 | 
   ges''4 bes2. | des,4 bes'2. | f4 c'2. |   
- c8 des ees des c2 | ges,4 bes'2 r4 |
+ c,8 des ees des c2 | ges4 bes'2 r4 |
  e,,4 ges'2. | f,4 a'2. | f,8^\mp a c ees des c a4\fermata | 
- << {ges2^\f s2 | ees2 s2 | } \\ {bes''4 bes2. | ges4 ges2. |} 
+ << {ges2 s2 | ees2 s2 | } \\ {bes''4  bes2. | ges4 ges2. |} 
  >>
  f4 c2. | 
  f,8^\mp a c ees des c des bes |
@@ -186,10 +187,10 @@ ees4 <ees, ges'>4 <f f'>4|
 r2. bes8~bes f des' bes r8 |
 <aes des  ees aes>2. aes'2. |
 <ees ges bes>2. <ees ges bes>2. |
-<ces ees ges ces>2. ces'2. |
+<ces ees ges ces>2.-^ ces'2. |
 <ees, ges bes>2. <ees ges bes>2. |
 <ces ees ges ces>2. ces'2. |
-<f, ges bes>4. <f ges bes>4.~<f ges bes>4.~<f ges bes>4. | a2. f,2. |
+<f, ges bes>4. <f ges bes>4.~<f ges bes>4.~<f ges bes>4. | a4. f,4.~f4.~f4.|
 <ees' ges bes>4. q~q~q |
 <<
   {a4. a4.~ a4.~ a4.}
