@@ -22,10 +22,10 @@ upper = \relative c' {
   g bes c f c bes e c |
   f,8 a c ees des c des c |
   g bes c f c bes e c |
-  \mark "II"
+  \mark "I'"
   \repeat volta 4 {f,^\markup{"repeat 4 times"} aes c ees des c des c |
   g-^ bes c e-^ c bes e-^ c} |
-  \mark "III"
+  \mark "II"
   \repeat volta 2 {f, aes f aes f aes f aes |
   e aes e aes e\> aes e aes\! |
   ees\mp aes ees aes ees aes ees aes |
@@ -38,7 +38,7 @@ upper = \relative c' {
   e bes' e, bes' e, bes' e, bes' |
   ees, c' ees, c' ees, c' ees, c' |
   ees, c' ees, c' ees, c' ees, c' |
-  \mark "III'"
+  \mark "II'"
   \repeat volta 2 {ees, c' ees, c' ees, c' ees, c' |
   ees, des' ees, des' ees, des' ees, des' |
   ees, ees' ees, ees' ees, ees' ees, ees' |}
@@ -73,20 +73,19 @@ r1 |
   }
 >>
 <a f'>8 c des es des c a4~ |
-a1~ |
-a1~ |
+a1 | r1 |
 \keytimetwo
 \override TextSpanner.bound-details.left.text = "rit."
 
-a4^\f \startTextSpan bes'8 a aes ees^\fermata |
+r4 \startTextSpan bes'8^\f a aes ees^\fermata |
 f2.~ |
-f2.~ \stopTextSpan |
-f2. |
+f2. \stopTextSpan |
+r2. |
 <c, ees ees'>2.~^\p
 <c ees ees'>2.
-a'2.~ | a2.~ | a2.~ | a2. |
+a'2.~ | a2. | r2. | r2. |
 \keytimethree
-\mark "I'"
+\mark "I''"
 bes8^\mf^\markup{"a tempo"} des f aes ges f ges f |
 c ees f ges f ees a f |
 bes,8-^ des f aes ges f ges f |
@@ -100,25 +99,22 @@ bes,8-^ des f aes ges f ges f |
 ges\> f ees a-^ f~f\fermata\!\stopTextSpan}
 \time 12/8
 \tempo "Swinging" 4 = 150
+\mark "III"
 \repeat volta 2 {
-<<
-  {bes8~ bes8 des8-^ bes8 des8~des8
-  bes8~bes8 a aes ges r8\fermata}
-  \\
-  {des,4}
->>
-<des e'>2.^\mp q
+bes8~ bes8 des8-^ bes8 des8~des8
+bes8~bes8 a aes ges r8\fermata
+<des, e'>2.^\mp ~q
 }
 <<
   {ges'8^\mf~ges bes ges bes~bes ges4 f e |}
   \\
-  {ges,4 r4 ges ees2}
+  {ges,2 r4 ges4 ees2}
 >>
 <ees f '>2.-^ ees'2.^\p |
 <<
   {ges8~ges bes ges bes~bes ges4 f e |}
   \\
-  {ges,4 r4 ges ees2}
+  {ges,2 r4 ges ees2}
 >>
 <ees f'>2. ees'2. |
 
@@ -168,15 +164,15 @@ lower = \relative c {
  ees  ,,4 ges'2. | f,4 a'2. | f,8^\mp a c ees des c a4\fermata |
  << {ges2 s2 | ees2 s2 | } \\ {bes''4  bes2. | ges4 ges2. |}
  >>
- f4 c2. |
+ f,4 c'2. |
  f,8^\mp a c ees des c des bes |
  f8 a c ees des c des bes |
  \time 3/4
  f^\mp a c ees des bes |
    f a' bes a aes f |
- f2.~ | f2. | ees2.~ | ees2.~ |
- ees2.~ | ees2.~ |
+ f2. | r2. | ees2.~ | ees2.~ |
  ees2.~ | ees2. |
+ r2. | r2. |
 \keytimethree
 <bes, des'>1 | ees'4. ges4. f4  |
 <bes,, des'>1-^ |
@@ -185,14 +181,19 @@ ees4. f4. a4 | bes,1-^  |
 \time 3/4
 ees4 <ees, ges'>4 <f f'>4|
 \time 12/8
-r2. bes8~bes f des' bes r8 |
-<aes des  ees aes>2. aes'2. |
+<bes f'  des'>2. bes,8~bes f' des' bes r8 |
+<a e' a>2. a '2. |
 <ees ges bes>2. <ees ges bes>2. |
 <ces ees ges ces>2.-^ ces'2. |
 <ees, ges bes>2. <ees ges bes>2. |
 <ces ees ges ces>2. ces'2. |
-<f, ges bes>4. <f ges bes>4.~<f ges bes>4.~<f ges bes>4. | a4. f,4.~f4.~f4.|
-<ees' ges bes>4. q~q~q |
+<des, ges bes>2.~ q |
+<<
+{a'4. a4.~a4.~a4.}
+\\
+{f,4. s4. s4. s4. }
+>>
+<ees' ges bes>2.~q |
 <<
   {a4. a4.~ a4.~ a4.}
   \\
